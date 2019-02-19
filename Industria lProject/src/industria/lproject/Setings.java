@@ -12,20 +12,36 @@ package industria.lproject;
 
 
 class Setings {
-    static boolean lightState[] = new boolean[5];
-    static String ips[] = new String[5];
+    static boolean lightState[] = new boolean[6];
+    static String ips[] = new String[6];
     
-    public void setIp(String ip,int adr){
+    static public void setIp(String ip,int adr){
         ips[adr]=ip;
     }
-    public String getIp(int adr){
+    static public String getIp(int adr){
         return ips[adr];
     }
     
-    public void setL(boolean ip,int adr){
-        lightState[adr]=ip;
+    static public void setL(int adr,boolean state){
+        lightState[adr-1]=state;
     }
-    public boolean getL(int adr){
+    static public boolean getL(int adr){
         return lightState[adr];
+    }
+    static public void flip(int adr){
+        lightState[adr] = lightState[adr] ^ true;
+    }
+
+    static void flipAll() {
+        if( lightState[0]){
+            for (int i =0;i<6;i++){
+                lightState[i]=false;
+            }
+        }else{
+            for (int i =0;i<6;i++){
+                lightState[i]=true;
+            }
+        }
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

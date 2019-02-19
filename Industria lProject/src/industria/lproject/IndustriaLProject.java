@@ -19,7 +19,29 @@ public class IndustriaLProject {
     static SetingsReader sr = new SetingsReader();
     public static void main(String[] args) {
         // TODO code application logic here
-        gui.display();
+        gui=gui.display();
+        //gui.setOff(0);
+        controler();
+    }
+    
+    public static void controler(){
+        Thread t = new Thread() {
+            public void run() {
+                while(true){
+                    for(int i =1;i<6;i++){
+                        boolean state =Setings.getL(i);
+                        if(state){
+                            gui.setOn(i);
+                        }else{
+                            gui.setOff(i);
+                        }
+                    }
+              
+                }
+            }
+        };
+        t.start();
+        
     }
     
 }
