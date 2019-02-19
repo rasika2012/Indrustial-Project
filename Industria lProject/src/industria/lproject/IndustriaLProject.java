@@ -28,7 +28,7 @@ public class IndustriaLProject {
         Thread t = new Thread() {
             public void run() {
                 while(true){
-                    for(int i =1;i<6;i++){
+                    for(int i =0;i<6;i++){
                         boolean state =Setings.getL(i);
                         if(state){
                             gui.setOn(i);
