@@ -28,19 +28,15 @@ class Setings {
     static public boolean getL(int adr){
         return lightState[adr];
     }
-    static public void flip(int adr){
+    static public void flip(int adr) throws Exception{
         lightState[adr] = lightState[adr] ^ true;
         refresh();
         sendReq(adr,lightState[adr]);
     }
     private static void refresh(){
-        if(lightState[1]&& lightState[2]&&lightState[3]&&lightState[4]&&lightState[5]){
-            lightState[0]=true;
-        }else{
-            lightState[0]=false;
-        }
+        lightState[0] = lightState[1]&& lightState[2]&&lightState[3]&&lightState[4]&&lightState[5];
     }
-    static void flipAll() {
+    static void flipAll() throws Exception {
         if( lightState[0]){
             for (int i =0;i<6;i++){
                 lightState[i]=false;
@@ -54,12 +50,13 @@ class Setings {
         }
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    private static void sendReq(int adr,boolean state){
+    private static void sendReq(int adr,boolean state) throws Exception{
         if(adr>0){
+            DeviceConector.setStatus(ips[adr-1]);
             System.out.println("Request Sent to:"+ adr + ":"+state);
         }
     }
-    static void stop() {
+    static void stop() throws Exception {
         for (int i =0;i<6;i++){
                 lightState[i]=false;
                 sendReq(i,false);

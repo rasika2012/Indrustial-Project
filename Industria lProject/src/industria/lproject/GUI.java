@@ -39,6 +39,9 @@ public class GUI extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Switch Board");
+        setBackground(new java.awt.Color(51, 51, 51));
+        setResizable(false);
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Segoe UI Symbol", 0, 24)); // NOI18N
