@@ -34,7 +34,7 @@ class Setings {
         setName(name, id);
     }
     static public void setL(int adr,boolean state){
-        lightState[adr-1]=state;
+        lightState[adr]=state;
     }
     static public boolean getL(int adr){
         return lightState[adr];
@@ -63,7 +63,7 @@ class Setings {
     }
     private static void sendReq(int adr,boolean state) throws Exception{
         if(adr>0){
-            DeviceConector.setStatus(ips[adr]);
+            DeviceConector.setStatus(adr);
             System.out.println("Request Sent to:"+ adr + ":"+state);
         }
     }
