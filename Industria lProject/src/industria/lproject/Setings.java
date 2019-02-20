@@ -14,6 +14,7 @@ package industria.lproject;
 class Setings {
     static boolean lightState[] = new boolean[6];
     static String ips[] = new String[6];
+    static String names[] = new String[6];
     
     static public void setIp(String ip,int adr){
         ips[adr]=ip;
@@ -22,6 +23,16 @@ class Setings {
         return ips[adr];
     }
     
+    static public void setName(String name,int adr){
+        names[adr]=name;
+    }
+    static public String getName(int adr){
+        return names[adr];
+    }
+    static public void changeIP(String ip,String name,int id){
+        setIp(ip, id);
+        setName(name, id);
+    }
     static public void setL(int adr,boolean state){
         lightState[adr-1]=state;
     }
@@ -52,7 +63,7 @@ class Setings {
     }
     private static void sendReq(int adr,boolean state) throws Exception{
         if(adr>0){
-            DeviceConector.setStatus(ips[adr-1]);
+            DeviceConector.setStatus(ips[adr]);
             System.out.println("Request Sent to:"+ adr + ":"+state);
         }
     }

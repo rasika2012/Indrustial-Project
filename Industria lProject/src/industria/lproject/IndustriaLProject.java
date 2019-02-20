@@ -20,6 +20,7 @@ public class IndustriaLProject {
     public static void main(String[] args) {
         // TODO code application logic here
         gui=gui.display();
+        SetingsReader.reload();
         //gui.setOff(0);
         controler();
     }
@@ -29,6 +30,7 @@ public class IndustriaLProject {
             public void run() {
                 while(true){
                     for(int i =0;i<6;i++){
+                        gui.setTitles(i);
                         boolean state =Setings.getL(i);
                         if(state){
                             gui.setOn(i);

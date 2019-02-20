@@ -12,6 +12,7 @@ import java.io.*;
  */
 class DeviceConector {
     static public void setStatus(String ip) throws Exception{
+        if(ip.length()>0)
         requester(ip);
     }
     static public boolean getStatus(String ip){
@@ -25,7 +26,9 @@ class DeviceConector {
 
 
     private static void requester(String ip) throws Exception {
-        URL yahoo = new URL("http://192.168.8.1");
+        String host="http://"+ip;
+        URL yahoo = new URL(host.toString());
+        System.out.print(host);
         URLConnection yc = yahoo.openConnection();
         BufferedReader in = new BufferedReader(
                                 new InputStreamReader(

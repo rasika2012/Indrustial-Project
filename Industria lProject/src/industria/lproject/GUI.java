@@ -6,6 +6,8 @@
 package industria.lproject;
 
 import java.awt.Color;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 
 /**
@@ -47,6 +49,11 @@ public class GUI extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Segoe UI Symbol", 0, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(51, 51, 51));
         jButton1.setText("L1");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton1MousePressed(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -57,6 +64,11 @@ public class GUI extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Segoe UI Symbol", 0, 24)); // NOI18N
         jButton2.setForeground(new java.awt.Color(51, 51, 51));
         jButton2.setText("L2");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton2MousePressed(evt);
+            }
+        });
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -67,6 +79,11 @@ public class GUI extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Segoe UI Symbol", 0, 24)); // NOI18N
         jButton3.setForeground(new java.awt.Color(51, 51, 51));
         jButton3.setText("L3");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton3MousePressed(evt);
+            }
+        });
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -77,6 +94,11 @@ public class GUI extends javax.swing.JFrame {
         jButton4.setFont(new java.awt.Font("Segoe UI Symbol", 0, 24)); // NOI18N
         jButton4.setForeground(new java.awt.Color(51, 51, 51));
         jButton4.setText("L4");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton4MousePressed(evt);
+            }
+        });
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -87,6 +109,11 @@ public class GUI extends javax.swing.JFrame {
         jButton5.setFont(new java.awt.Font("Segoe UI Symbol", 0, 24)); // NOI18N
         jButton5.setForeground(new java.awt.Color(51, 51, 51));
         jButton5.setText("L5");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jButton5MousePressed(evt);
+            }
+        });
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -158,39 +185,102 @@ public class GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        Setings.flip(1);
+        try {
+            // TODO add your handling code here:
+            Setings.flip(1);
+        } catch (Exception ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        Setings.flip(2);
+        try {
+            // TODO add your handling code here:
+            Setings.flip(2);
+        } catch (Exception ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        Setings.flip(3);
+        try {
+            // TODO add your handling code here:
+            Setings.flip(3);
+        } catch (Exception ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        Setings.flip(4);
+        try {
+            // TODO add your handling code here:
+            Setings.flip(4);
+        } catch (Exception ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-        Setings.flip(5);
+        try {
+            // TODO add your handling code here:
+            Setings.flip(5);
+        } catch (Exception ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-        Setings.flipAll();
+        try {
+            // TODO add your handling code here:
+            Setings.flipAll();
+        } catch (Exception ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-        Setings.stop();
+        try {
+            // TODO add your handling code here:
+            Setings.stop();
+        } catch (Exception ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MousePressed
+        // TODO add your handling code here:
+        if(evt.getButton()==3){
+            SaveIP.showDialog(2);
+        }
+    }//GEN-LAST:event_jButton2MousePressed
+
+    private void jButton4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MousePressed
+        // TODO add your handling code here:
+        if(evt.getButton()==3){
+            SaveIP.showDialog(4);
+        }
+    }//GEN-LAST:event_jButton4MousePressed
+
+    private void jButton3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MousePressed
+        // TODO add your handling code here:
+        if(evt.getButton()==3){
+            SaveIP.showDialog(3);
+        }
+    }//GEN-LAST:event_jButton3MousePressed
+
+    private void jButton5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MousePressed
+        // TODO add your handling code here:
+        if(evt.getButton()==3){
+            SaveIP.showDialog(5);
+        }
+    }//GEN-LAST:event_jButton5MousePressed
+
+    private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
+        // TODO add your handling code here:
+        if(evt.getButton()==3){
+            SaveIP.showDialog(1);
+        }
+    }//GEN-LAST:event_jButton1MousePressed
     
     public void setOn(int btn){
             JButton bttn = null;
@@ -260,6 +350,44 @@ public class GUI extends javax.swing.JFrame {
             }
             
             bttn.setBackground(Color.GRAY);
+    }
+    
+    public void setTitles(int btn){
+            JButton bttn = null;
+            switch (btn){
+                case 0 : 
+                    bttn = jButton6;
+                    break;
+                
+                case 1 : 
+                    bttn = jButton1;
+                    break;
+                case 2 : 
+                    bttn = jButton2;
+                    break;
+                    
+                case 3 : 
+                    bttn = jButton3;
+                    break;
+                    
+                case 4 : 
+                    bttn = jButton4;
+                    break;
+                    
+                case 5 : 
+                    bttn = jButton5;
+                    break;
+                
+                case 6 : 
+                    bttn = jButton6;
+                    break;
+                    
+                
+            }
+            if(Setings.getName(btn)!="" && Setings.getName(btn)!=null ){
+                bttn.setText(Setings.getName(btn));
+            }
+            
     }
     /**
      * @param args the command line arguments
